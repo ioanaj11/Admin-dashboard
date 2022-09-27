@@ -1,0 +1,199 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    height:100vh;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    grid-area: 1/1/3/2;
+    background-color: blue;
+    padding:max(1vw, 5px);
+    font-size: max(1vw,25px);
+    }
+
+.sidebar>*{
+    padding-bottom: max(3vw, 30px);
+}
+
+.sidebar>h1{
+    font-size: max(1.5vw, 30px);
+}
+
+.sidebar>div>ul>li{
+    padding-bottom: 8px;
+}
+
+.header{
+    padding-left:20px;
+    padding-right: 20px;
+    grid-area: 1/2/2/3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: blueviolet;
+}
+
+.header-up{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex:1;
+    }
+
+.header-down{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex:1;
+}
+
+.header-up>input{
+    flex:1;
+    margin-right: max(10px, 25vw);
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+ }
+
+.header-buttons {
+    display:flex;
+    gap: 30px;
+     }
+
+.header-buttons>button{
+    padding:5px 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 15px;
+    height:40px;
+    width:100px;
+}
+
+.main{
+    grid-area: 2/2/3/3;
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr 6fr;
+    background-color: brown;
+    gap:10px;
+    padding:20px;
+    padding-top: 0px;
+    width: max(80vw, 800px);
+}
+
+.titles-for-main{
+    display:grid;
+    align-items: end;
+}
+
+.projects{
+    grid-area: 2/1/5/2;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.card{
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding:5px;
+}
+
+.announcements{
+    grid-area: 2/2/3/3;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding:5px;
+}
+
+.announcement{
+    padding:5px;
+}
+
+.trending{
+    grid-area: 4/2/5/3;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.trending>button{
+    margin: 5px;
+    padding:5px;
+}
+
+.main:nth-child(5){
+    grid-area: 3/2/4/3;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
