@@ -98,7 +98,7 @@ table {
    transform:translateY(3px);
 }
 
-a{
+.sidebar a{
     text-decoration: none;
     color: var(--cards-color);
 }
@@ -111,7 +111,7 @@ a{
     font-size: max(1.5vw, 30px);
 }
 
-.sidebar>div>ul>li{
+.sidebar li{
     padding-bottom: 8px;
 }
 
@@ -120,7 +120,7 @@ a{
     padding-right: 20px;
     grid-area: 1/2/2/3;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     background-color: var(--cards-color);
 }
 
@@ -129,15 +129,28 @@ a{
     justify-content: space-between;
     align-items: center;
     flex:1;
+    gap: 20px;
     }
+
+.header-up>img:nth-of-type(2){
+    height:50px;
+    width:50px;
+    padding-top: 5px;
+}
 
 .header-down{
     display:flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     flex:1;
     padding-top: 10px;
     padding-bottom: 5px;
+}
+
+.header-down>img{
+    height:80px;
+    width:80px;
+    padding-right: 10px;
 }
 
 .header-up>form{
@@ -151,12 +164,12 @@ a{
     padding-right: 10px;
 }
 
-.header-up>form>button{
+.header-up button{
     border: none;
     background-color: var(--cards-color);
 }
 
-.header-up>form>input{
+.header-up input{
     flex:1;
     border-radius: 15px;
     border: none;
@@ -170,6 +183,7 @@ a{
 .header-buttons {
     display:flex;
     gap: 30px;
+    margin-left: auto;
      }
 
 .header-buttons>button{
@@ -274,7 +288,7 @@ button:active{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding:5px;
 }
 
@@ -290,11 +304,39 @@ button:active{
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    padding-left: 30px;
 }
 
 .trending>button{
     margin: 5px;
     padding:5px;
+}
+
+.trending img{
+    height:50px;
+    width:50px;
+    padding-right: 25px;
+}
+
+.trending>div{
+    display:flex;
+    align-items: center;
+    }
+
+.trending>div>div{
+    display:flex;
+    flex-direction: column;
+}
+
+.trending a{
+    text-decoration: none;
+    margin-top: 5px;
+    color: var(--buttons-color);
+    font-weight: 600;
+}
+
+.trending p{
+    font-weight: 600;
 }
 
 .main:nth-child(5){
