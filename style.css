@@ -48,11 +48,11 @@ table {
 }
 
 :root{
-    --sidebar-color: #334155;
-    --searchbar--color: #94a3b8;
-    --cards-color: #fefce8;
+    --sidebar-color: #242e3b;
+    --searchbar--color: #6a7788;
+    --cards-color: #edf5f3;
     --sidebar-text-color: #ecfdf5;
-    --buttons-color: #6ee7b7;
+    --buttons-color: #47ce98;
 }
 
 .container{
@@ -88,6 +88,14 @@ table {
     width:20px;
     margin-bottom: -2px;
     padding-right: 8px;
+}
+
+.sidebar>div>ul>li:hover{
+    transform: scale(1.1);
+    }
+
+.sidebar>div>ul>li:active{
+   transform:translateY(3px);
 }
 
 a{
@@ -128,6 +136,8 @@ a{
     justify-content: space-between;
     align-items: center;
     flex:1;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
 .header-up>form{
@@ -163,13 +173,20 @@ a{
      }
 
 .header-buttons>button{
-    padding:5px 20px;
+    padding:3px 10px;
     font-size: 17px;
     font-weight: 600;
     border-radius: 15px;
-    height:40px;
-    width:100px;
+    width:90px;
     background-color: var(--buttons-color);
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+button:active{
+    transform: translateY(3px);
 }
 
 .main{
@@ -198,6 +215,7 @@ a{
 
 .card{
     display:flex;
+    align-items: stretch;
     background-color: var(--cards-color);
     border-radius: 5px;
     padding:5px;
@@ -211,9 +229,43 @@ a{
     border-bottom-left-radius: 5px;
     }
 
-.card>h3{
-    padding-left: 15px;
-    padding-top: 15px;
+.project-card{
+    display:flex;
+    flex:1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:space-around;
+}
+
+.project-card>img{
+    height: auto;
+    width: 27.5vw;
+    margin-left: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.project-card>h3{
+    padding: 15px 15px 15px 20px;
+    text-shadow: 1px 1px var(--searchbar--color);
+
+}
+
+.project-card>div{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-card>div>a>img{
+    height: 30px;
+    width: auto;
+    margin-right:15px;
+    margin-top: 5px;
+}
+
+.project-card>div>a>img:hover{
+    transform: rotate(360deg) scale(1.3);
+    transition: 0.5s;
 }
 
 .announcements{
@@ -222,6 +274,7 @@ a{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding:5px;
 }
 
@@ -259,7 +312,7 @@ h2{
 }
 
 h3{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     padding-bottom: 3px;
     padding-left: 3px;
@@ -269,3 +322,4 @@ h3{
     padding-left:3px;
     font-size: 15px;
 }
+
